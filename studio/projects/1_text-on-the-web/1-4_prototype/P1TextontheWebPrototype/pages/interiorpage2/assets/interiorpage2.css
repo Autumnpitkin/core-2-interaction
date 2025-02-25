@@ -1,0 +1,861 @@
+body {
+    font-family: "Inter", serif;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    background-image: url(Background\ copy\ 2.jpg);
+}
+
+/* Navigation Styling */
+nav {
+    background: #222;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background: #444;
+    border-radius: 5px;
+}
+
+/* Menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+    align-items: center;
+    left: 10px;
+    height: 40px;
+    top: 50%;
+}
+
+.menu div {
+    width: 25px;
+    height: 4px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Ensure the nav-links dropdown appears above everything */
+#nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+#nav-links li {
+    padding: 10px;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+/* Responsive design for the menu */
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu div {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        margin: 3px 0;
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1200;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        text-align: center;
+        padding: 5px;
+    }
+
+    #nav-links a {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between; /* Allows hamburger and menu */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #343434;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+/* What Happend on August 13th? */
+.hero h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Road Rage", serif;
+    font-size: 80px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Examine the Evidence */
+.evidence h2{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -60px;
+}
+
+.discovery h2{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -60px;
+}
+
+.evidence p{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+/* Event Box */
+.timeline {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgb(118, 1, 1);
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+}
+
+.timeline-event {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgb(118, 1, 1);
+    border-radius: 10px;
+}
+
+/* Title 1 */
+.event h3{
+    font-family: "Road Rage", serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+}
+
+/* Title 2 */
+.event h4{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -80px;
+}
+
+/* Date Heading */
+.event h5{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Paragraph */
+.event p{
+    font-family: "Inter", serif;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: white;
+    margin-top: -30px;
+    font-weight: normal;
+}
+
+/* Interview Video */
+.interview h2{
+    font-family: "Road Rage", serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+}
+
+.video-section, .audio-section {
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: rgb(118, 1, 1);
+    width: 100%;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+}
+
+button {
+    background: rgb(118, 1, 1);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Popup Warning */
+.alert {
+    padding: 20px;
+    background-color:  rgb(118, 1, 1);
+    color: white;
+    font-size: 16px;
+  }
+  
+  .closebtn {
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+/* Fonts */
+.road-rage-regular {
+    font-family: "Road Rage", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.nunito-sans {
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 112.5,
+      "YTLC" 500;
+}
+
+
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Book Pages */
+.book {
+    transition: opacity 0.4s 0.2s;
+    width: 65%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    padding: 20px;                
+    border-radius: 10px;  
+    margin: auto;
+    background-color: #ecd9b2;
+}
+   
+.page h3{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 40px;
+    margin-top: 80px;
+    color: rgb(118, 1, 1);
+    text-align: center;
+}
+
+.page h4{
+    font-family: "Inter", serif;
+    margin-top: 8vw;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 40px;
+    font-weight: normal;
+}
+
+.page h5{
+    font-family: "Road Rage", serif;
+    text-transform: uppercase;
+    font-size: 6rem;
+    margin: 40px;
+    margin-top: 80px;
+    color: rgb(118, 1, 1);
+    text-align: center;
+}
+
+.page h6{
+    font-family: "Nunito Sans", serif;
+    margin-top: 8vw;
+    text-align: left;
+    font-size: 1.3rem;
+    color: #000000;
+    margin-left: 70px;
+    margin-right: 25px;
+    margin-top: -20px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+p{
+    font-family: "Inter", serif;
+    margin-top: 8vw;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 40px;
+}
+
+.page {
+    width: 30vw;
+    height: 44vw;
+    background-color: #111111;
+    float: left;
+    margin-bottom: 0.5em;
+    background: left top no-repeat;
+    background-size: cover;
+    margin: auto;
+    overflow: scroll;
+}
+
+.page:nth-child(even) {
+    clear: both;
+}
+
+.book .pages {
+    width: 60vw;
+    height: 44vw;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
+}
+
+.book .page {
+    float: none;
+    clear: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 30vw;
+    height: 44vw;
+    transform-origin: 0 0;
+    transition: transform 1.0s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    user-select: none;
+    background-color: #f0f0f0;
+}
+
+.book .page:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.7s;
+    z-index: 2;
+}
+
+.book .page:nth-child(odd) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+}
+
+.book .page:nth-child(odd):hover {
+    transform: rotateY(-15deg);
+}
+
+.book .page:nth-child(odd):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.book .page:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0);
+}
+
+.book .page:nth-child(even) {
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transform-origin: 100% 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    border-color: black;
+    background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+}
+
+.book .page:nth-child(even):before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.book .page.grabbing {
+    transition: none;
+}
+
+.book .page.flipped:nth-child(odd) {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+}
+
+.book .page.flipped:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.book .page.flipped:nth-child(even) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+}
+
+.book .page.flipped:nth-child(even):hover {
+    transform: rotateY(15deg);
+}
+
+.book .page.flipped:nth-child(even):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.book .page.flipped:nth-child(even):before {
+    background: rgba(0, 0, 0, 0);
+}
+
+.page img {
+    width: 100%;
+    max-width: 800px;
+    height: 44vw;
+}
+
+*,
+* :before,
+*:after {
+    box-sizing: border-box;
+}
+ 
+.page:nth-child(odd){
+    background-position: right top;
+}
+
+.test {
+    border-width: 0 10px;
+    border-color: black;
+    border-style: solid;
+    height: 50px;
+    border-radius: 10px/50%;
+}
+  
+.chat blockquote {
+    line-height: 1.7;
+    max-width: 75%;
+    margin-bottom: 0.5ex;
+    display: inline-block;
+    padding: 0.5ex 1em;
+    border-radius: 1.5ex/1em;
+    position: relative;
+    box-shadow: 0 15px 1px -12px rgba(0,0,0,0.05);
+    font-size: 16px;
+}
+  
+.chat .them, .chat .me { margin-bottom: 1ex; }
+.chat .them { text-align: left; }
+.chat .me { text-align: right; }
+  
+blockquote:last-child::before {
+    display:block;
+    position: absolute;
+    z-index: -999;
+    border: 1ex solid transparent;
+    bottom: 0;
+    border-radius: 1em/1ex;  
+}
+  
+.chat .them blockquote { background-color: #696868; }
+.chat .them blockquote:last-child::before {
+    border-bottom-color: #696868;
+    border-right-color: #696868;
+    left: -0.8ex;
+    content: "";
+}
+  
+.chat .typing blockquote { 
+    background-color: #696868;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.chat .typing blockquote:last-child::before {
+    border-color: #696868;
+    border-width: 0.6ex;
+    border-radius: 0.6ex;
+    left: -0.2ex;
+    box-shadow: -1.1ex 0.3ex 0 -0.3ex #696868;
+    content: "";
+}
+  
+.chat .me blockquote {
+    background-color: #007AFF;
+    background-image: linear-gradient(180deg,#007AFF,#1D62F0);
+    color: white;
+}
+  
+.chat .me blockquote:last-child::before {
+    content: "";
+    right: -0.8ex;
+    border-bottom-color: #1D62F0;  
+    border-left-color: #1D62F0;
+}
+  
+.messages-box{
+    background-color: #8c89893e;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    height: 500px;
+    overflow: scroll;
+    border: 2px solid rgb(118, 1, 1);
+    border-radius: 10px;
+    margin: 2em;
+}
+
+h6 {
+    font-size: .7em;
+    text-align: center;
+    margin: 1em 0;
+    color: #ccc;
+}
+  
+h6 em { font-weight: bold; }
+
+ol li{
+    list-style-type: none;
+}
+
+
+@media (max-width: 1400px) {
+    .hero h1 {
+        font-size: 60px;
+        margin: auto;
+        padding-top: 30px;
+        margin-bottom: -20px;
+        padding: 20px;
+    }
+    
+    .evidence h2{
+        font-size: 20px;
+        margin: auto;
+        padding-bottom: 30px;
+        padding-top: 5px;
+    }
+
+    .discovery h2{
+        font-size: 20px;
+        margin-top: -20px;
+    }
+
+    .evidence p{
+        font-size: 10px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .event h5{
+        font-size: 10px;
+        margin: auto;
+        padding: 5px;
+    }
+
+    .event p {
+        font-size: 10px;
+        margin: auto;
+        padding: 2px;
+    }
+
+    .timeline {
+        margin-top: 10px;
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+        height: 100px;
+        overflow: scroll;
+    }
+
+    .page h5{
+        font-size: 35px;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    .page h3{
+        font-size: 10px;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    p{
+        font-size: 8px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page h4{
+        font-size: 8px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page h6{
+        font-size: 10px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page{
+        overflow: scroll;
+        width: 25vw;
+        height: 39vw;
+        float: left;
+        margin-bottom: 0.5em;
+        background: left top no-repeat;
+        background-size: cover;
+        margin: auto;
+    }
+
+    .interview h2{
+        font-size: 40px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .alert{
+        font-size: 10px;
+    }
+
+    .video-section {
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .video-container {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        width: 100%;
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .chat blockquote {
+        line-height: 1.7;
+        max-width: 75%;
+        margin-bottom: 0.5ex;
+        display: inline-block;
+        padding: 0.5ex 1em;
+        border-radius: 1.5ex/1em;
+        position: relative;
+        box-shadow: 0 15px 1px -12px rgba(0,0,0,0.05);
+        font-size: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 1200px){
+    nav a{
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px){
+    .page h5{
+        font-size: 15px;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .page h3{
+        font-size: 8px;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    p{
+        font-size: 7px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page h6{
+        font-size: 5px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page{
+        overflow: scroll;
+        width: 25vw;
+        height: 39vw;
+        float: left;
+        margin-bottom: 0.5em;
+        background: left top no-repeat;
+        background-size: cover;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 800px){
+    .page h5{
+        font-size: 15px;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .page h3{
+        font-size: 8px;
+        margin: auto;
+        padding-top: 10px;
+        line-height: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    p{
+        font-size: 7px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page h6{
+        font-size: 4px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .page{
+        overflow: scroll;
+        width: 25vw;
+        height: 39vw;
+        float: left;
+        margin-bottom: 0.5em;
+        background: left top no-repeat;
+        background-size: cover;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 500px){
+    p{
+        font-size: 5px;
+        margin: auto;
+        padding: 10x;
+    }
+
+    .event p {
+        font-size: 8px;
+        margin: auto;
+        padding: 2px;
+    }
+}
