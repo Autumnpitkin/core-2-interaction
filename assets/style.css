@@ -1,0 +1,56 @@
+html {
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	font-family: "Nunito Sans", serif;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 40px;
+}
+
+h1{
+	font-size: 50px;
+	font-weight: 800px;
+}
+
+h2{
+	font-size: 40px;
+	font-weight: 400px;
+}
+
+ul{
+	font-size: 30px;
+	line-height: 60px;
+	list-style: none;
+	color: hotpink;
+	font-weight: lighter;
+}
+
+a:link{
+	color: hotpink;
+	text-decoration: none;
+}
+
+a:visited{
+	color: hotpink;
+}
+
+a:active{
+	color: hotpink;
+}
+
+a:hover{
+	color: hotpink;
+}
+
+// <weight>: Use a value from 200 to 1000
+// <uniquifier>: Use a unique and descriptive class name
+
+.nunito-sans {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 112.5,
+    "YTLC" 500;
+}

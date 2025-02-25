@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closing Case Files</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:opsz,wdth,wght@6..12,112.5,200&family=Road+Rage&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage4/assets/interiorpage4.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-links">
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/index.html">Home</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage1/interiorpage1.html">Victims & Family</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage2/interiorpage2.html">The Disappearance</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage4/interiorpage4.html">Tracing the Crime</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage3/interiorpage3.html">Closing Case Files</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage5/interiorpage5.html">The Aftermath</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/aboutpage/aboutpage.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Warning!</strong> This content may include explicit material. Viewer discretion is advised. The intention is not to offend but to provide information. Proceed only if you are comfortable with potentially sensitive topics.
+      </div>
+    
+    <section class="hero">
+        <h1>Tracing the Tragedy</h1>
+    </section>
+
+    <section class="evidence">
+        <h2>Discovery Report & Interactive Map</h2>
+    </section>
+    
+
+    <div class="book">
+        <div id="pages" class="pages">
+          <div class="page"><h5>DISCOVERY REPORT</h5>
+        <h6>Frederick Police Department<br>
+            <br> 
+            CASE REPORT NUMBER: 1806743
+            <br>
+            DATE OF REPORT: 8/13/2018
+            <br>
+            OFFICER NAME: Coonrod, Scott
+            <br>
+            LOCATION: 2825 Saratoga Trail
+        <br>
+        </h6></div>
+          <div class="page"><img src="assets/Page5Edited.jpg"></div>
+          <div class="page"><img src="assets/Page6 copy.jpg"></div>
+          <div class="page"><img src="assets/Page7 copy.jpg"></div>
+          <div class="page"><img src="assets/Page8 copy.jpg"></div>
+          <div class="page"><img src="assets/Page9Edited copy.jpg"></div>
+          <div class="page"><img src="assets/Page10 copy.jpg"></div>
+          <div class="page"><img src="assets/Page11Edited copy.jpg"></div>
+          <div class="page"><img src="assets/Page12Edited copy.jpg"></div>
+          <div class="page"><img src="assets/Page13 copy.jpg"></div>
+          <div class="page"><img src="assets/Page14 copy.jpg"></div>
+          <div class="page"><img src="assets/Page15 copy.jpg"></div>
+          </div>
+        </div>
+    </div>
+
+    <section class="interview">
+        <h2>A Grisly</h2>
+    </section>
+
+    <section class="discovery">
+        <h2>Discovery</h2>
+    </section>
+
+    <section class="timeline">
+        <div class="event">
+            <h5>August 16, 2018:</h5>
+            <p>On Aug. 16, Shanann's body was found on the property of Anadarko Petroleum Corporation, an oil and gas
+                company where Chris had worked. Daughters B.W. and C.W. were located later that day in oil tanks near 
+                Shanann's body. Shanann had been strangled, while the girls had been smothered. </p>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="interview">
+        <h2>Crime Scene</h2>
+    </section>
+
+    <section class="discovery">
+        <h2>Locations</h2>
+    </section>
+
+    <section class="map-section">
+    <div id="crime-map"></div>
+    </section>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        // Initialize the map
+        var map = L.map('crime-map').setView([40.0869, -104.9449], 11); // Centered around Frederick, CO
+    
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Locations
+        var wattsHouse = [40.0869, -104.9449]; // Watts family house
+        var bodySite = [40.2161, -104.3666]; // Location where bodies were found
+    
+        // Add markers
+        L.marker(wattsHouse).addTo(map)
+            .bindPopup("<b>Watts Family House</b><br>2825 Saratoga Trail, Frederick, CO")
+            .openPopup();
+    
+        L.marker(bodySite).addTo(map)
+            .bindPopup("<b>Location of Bodies</b><br>Anadarko Petroleum Site");
+    
+    </script>
+    
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("nav-links");
+        menu.classList.toggle("active");
+    }
+    </script>
+
+<script>
+
+    var books = document.getElementsByClassName('book');
+    
+    for(var j = 0; j < books.length; j++)
+    {
+      
+      var pages = books[j].getElementsByClassName('page');
+      
+      for(var i = 0; i < pages.length; i++)
+       {
+         var page = pages[i];
+         if (i % 2 === 0)
+           {
+             page.style.zIndex = (pages.length - i);
+           }
+       }
+   
+        for(var i = 0; i < pages.length; i++)
+        {
+           //Or var page = pages[i];
+           pages[i].pageNum = i + 1;
+           pages[i].onclick=function()
+            {
+              if (this.pageNum % 2 === 0)
+                {
+                  this.classList.remove('flipped');
+                  this.previousElementSibling.classList.remove('flipped');
+                }
+              else
+                {
+                  this.classList.add('flipped');
+                  this.nextElementSibling.classList.add('flipped');
+                }
+          }
+        }
+      }
+
+    
+   </script>
+
+</body>
+</html>

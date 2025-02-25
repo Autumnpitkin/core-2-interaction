@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closing Case Files</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:opsz,wdth,wght@6..12,112.5,200&family=Road+Rage&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage3/assets/interiorpage3.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-links">
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/index.html">Home</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage1/interiorpage1.html">Victims & Family</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage2/interiorpage2.html">The Disappearance</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage4/interiorpage4.html">Tracing the Crime</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage3/interiorpage3.html">Closing Case Files</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage5/interiorpage5.html">The Aftermath</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/aboutpage/aboutpage.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Warning!</strong> This content may include explicit material. Viewer discretion is advised. The intention is not to offend but to provide information. Proceed only if you are comfortable with potentially sensitive topics.
+      </div>
+
+      <section class="hero">
+        <h1>Investigator</h1>
+    </section>
+
+    <section class="evidence">
+        <h2>Insights</h2>
+    </section>
+
+
+        <section class="investigator-insights">
+            <div class="insight">
+                <h3>Insights from the FBI Special Agent Grahm Coder and Investigator Tammy Lee</h3>
+                <p>While in police custody, Chris claimed that he told Shanann that he wanted to separate. He alleged that he went downstairs and noticed Shanann strangling C.W. — and that B.W.'s lifeless body was nearby. He ran upstairs in a "rage," he claimed and strangled Shanann. Cops didn't believe his story. "His story didn't match the evidence that we had," a police source told PEOPLE at the time.</p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="insight">
+                <h3>September, 2022 - Investigators Speak Out</h3>
+                <p>FBI Special Agent Grahm Coder and Colorado Bureau of Investigation Field Agent Tammy Lee spoke in September 2022 at the Northeast South Dakota Family Violence Prevention Conference in Aberdeen, S.D.
+                    According to Coder, Watts had no criminal record or history of domestic violence before the murders, according to Coder and Lee, who also explained general warning signs to identify domestic violence.</p>
+            </div>
+        </section>
+
+    <div class="title">
+        <h3>SUBMIT YOUR FINAL REPORT</h3>
+    </div>
+
+        <section class="final-report">
+            <form>
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date">
+                <br>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br>
+
+                <label for="verdict">Verdict:</label>
+                <input type="text" id="verdict" name="verdict">
+                <br>
+
+                <label for="summary">Summary of Findings:</label>
+                <textarea id="summary" name="summary"></textarea>
+                <br>
+
+                <label for="important-dates">Important Dates/Events:</label>
+                <textarea id="important-dates" name="important-dates"></textarea>
+                <br>
+
+                <label for="resolution">Resolution/Next Steps:</label>
+                <textarea id="resolution" name="resolution"></textarea>
+                <br>
+
+                <button type="submit">SUBMIT YOUR FINDINGS</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="container">
+        <div class="insight">
+            <h4>AFTER YOU SUBMITTED YOUR REPORT</h4>
+        </div>
+    
+        <div class="title">
+            <h2>HOVER OVER THE TEXT TO REVEAL THE VERDICT</h2>
+        </div>
+    
+        <table id="myTable">
+            <tr>
+                <td></td>
+                <td></td>
+                <td>WATTS COMES CLEAN - GUILTY VERDICT <br>
+                    On March 7, 2019, a video of Chris Watts' full confession — which he'd provided to investigators in February 
+                    — was made public. In the video, he told investigators from the Colorado Bureau of Investigation that 
+                    on the night of the murders, he'd jumped on Shanann in bed after he'd told her he didn't love 
+                    her anymore. He claims she threatened to leave him and take the children. Then Watts drove 45 
+                    minutes to a remote oil field, with Shanann's corpse in the bed of the truck and his still-living 
+                    girls in the backseat. Before burying Shanann in a shallow grave, Watts said he smothered C.W. 
+                    in the backseat. After dumping C.W.'s body in an old field, he returned to smother B.W., who 
+                    begged for her life. As he went to kill her, B.W. screamed, "Daddy, No!" and "it was the last words 
+                    she spoke," the report reads.
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("nav-links");
+        menu.classList.toggle("active");
+    }
+    </script>
+
+</body>
+</html>

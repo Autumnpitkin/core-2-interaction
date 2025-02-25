@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneath The Lies - Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:opsz,wdth,wght@6..12,112.5,200&family=Road+Rage&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/autumnpitkin/Desktop/P1TextontheWeb/assets/index.css">
+</head>
+<body>
+<!-- Sensitive Content Warning Popup -->
+<div id="popup" class="popup-overlay">
+    <div class="popup-content">
+        <h2>⚠️ 
+            <br>
+            
+            SENSITIVE CONTENT WARNING</h2>
+        <p>This site contains discussions of true crime cases that may be disturbing to some viewers. Viewer discretion is advised.</p>
+        <button onclick="continueSite()">Yes, Continue</button>
+        <button onclick="exitSite()">No, Exit</button>
+    </div>
+</div>
+
+    <header>
+        <nav>
+            <div class="menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-links">
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/index.html">Home</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage1/interiorpage1.html">Victims & Family</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage2/interiorpage2.html">The Disappearance</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage4/interiorpage4.html">Tracing the Crime</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage3/interiorpage3.html">Closing Case Files</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage5/interiorpage5.html">The Aftermath</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/aboutpage/aboutpage.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>BENEATH THE LIES:</h1>
+            <h2>REVISITING THE WATTS 
+                <br>
+                FAMILY MURDERS</h2>
+            <p>Begin your investigation into the Chris Watts case—explore the evidence, uncover hidden details, and piece together the truth to form your own verdict.</p>
+            <button class="start-btn" onclick="location.href='/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage1/interiorpage1.html'">START INVESTIGATION</button>
+        </section>
+    
+        <section class="case-file">
+            <div class="file-container">
+                <!-- Back Arrow -->
+                <button class="arrow-btn" id="backArrow" onclick="toggleCaseFile(false)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                    </svg>
+                </button> 
+    
+                <!-- Case File 1 -->
+                <div class="file" id="caseFile1">
+                    <h3>Case File 1</h3>
+                    <p>VICTIMS & FAMILY BACKGROUND</p>
+                    <button class="investigate-btn" onclick="location.href='/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage1/interiorpage1.html'">INVESTIGATE</button>
+                </div>
+    
+                <!-- Case File 2 -->
+                <div class="file" id="caseFile2" style="display: none;">
+                    <h3>Case File 2</h3>
+                    <p>THE DISAPPEARANCE</p>
+                    <button class="investigate-btn" onclick="location.href='/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage2/interiorpage2.html'">INVESTIGATE</button>
+                </div>
+
+                <!-- Case File 3 - Discovery Report -->
+                <div class="file" id="caseFile3" style="display: none;">
+                    <h3>Case File 3</h3>
+                    <p>DISCOVERY REPORT</p>
+                    <button class="investigate-btn" onclick="location.href='/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage4/interiorpage4.html'">INVESTIGATE</button>
+                </div>
+    
+                <!-- Forward Arrow -->
+                <button class="arrow-btn" id="forwardArrow" onclick="toggleCaseFile(true)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+<script>
+        let currentCase = 1;
+    
+    function toggleCaseFile(forward) {
+        const caseFiles = [
+            document.getElementById("caseFile1"),
+            document.getElementById("caseFile2"),
+            document.getElementById("caseFile3")
+        ];
+
+        caseFiles.forEach(file => file.style.display = "none"); // Hide all files
+        
+        if (forward) {
+            currentCase = (currentCase % caseFiles.length) + 1; // Cycle forward
+        } else {
+            currentCase = (currentCase - 2 + caseFiles.length) % caseFiles.length + 1; // Cycle backward
+        }
+        
+        caseFiles[currentCase - 1].style.display = "block"; // Show the correct case file
+    }
+</script>
+        
+
+<script>
+    function toggleMenu() {
+    var menu = document.getElementById("nav-links");
+    menu.classList.toggle("active");
+}
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Show the popup when the page loads
+        document.getElementById("popup").style.display = "flex";
+    });
+
+    function continueSite() {
+        document.getElementById("popup").style.display = "none"; // Hide popup
+    }
+
+    function exitSite() {
+        window.location.href = "https://www.google.com"; // Redirect to another site
+    }
+</script>
+
+
+        
+</body>
+</html>

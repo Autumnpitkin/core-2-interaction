@@ -1,0 +1,886 @@
+body {
+    font-family: "Inter", serif;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    background-image: url(Background\ copy.jpg);
+}
+
+/* Navigation Styling */
+nav {
+    background: #222;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background: #444;
+    border-radius: 5px;
+}
+
+/* Menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+    align-items: center;
+    left: 10px;
+    height: 40px;
+    top: 50%;
+}
+
+.menu div {
+    width: 25px;
+    height: 4px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Ensure the nav-links dropdown appears above everything */
+#nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+#nav-links li {
+    padding: 10px;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+/* Responsive design for the menu */
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu div {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        margin: 3px 0;
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1200;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        text-align: center;
+        padding: 5px;
+    }
+
+    #nav-links a {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between; /* Allows hamburger and menu */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #343434;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+/* What Happend on August 13th? */
+.hero h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Road Rage", serif;
+    font-size: 80px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Examine the Evidence */
+.evidence h2{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -60px;
+}
+
+.title h4{
+    font-weight: bold;
+    font-family: "Road Rage", serif;
+    font-size: 80px;
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Investigator Insights */
+.investigator-insights {
+    margin-top: 10px;
+    padding: 20px;
+    background: rgba(28, 28, 28, 0.7);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.insight h3{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+
+.insight p{
+    font-family: "Inter", serif;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.discovery h2{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -60px;
+}
+
+.evidence p{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+/* Event Box */
+.timeline {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgb(118, 1, 1);
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+}
+
+.timeline-event {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgb(118, 1, 1);
+    border-radius: 10px;
+}
+
+/* Title 1 */
+.event h3{
+    font-family: "Road Rage", serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+}
+
+/* Title 2 */
+.event h4{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -80px;
+}
+
+/* Date Heading */
+.event h5{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Paragraph */
+.event p{
+    font-family: "Inter", serif;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: white;
+    margin-top: -30px;
+    font-weight: normal;
+}
+
+/* Interview Video */
+.interview h2{
+    font-family: "Road Rage", serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+}
+
+.video-section, .audio-section {
+    margin: 30px auto;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border-color: rgb(118, 1, 1);
+    width: 100%;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+}
+
+button {
+    background: rgb(118, 1, 1);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Popup Warning */
+.alert {
+    padding: 20px;
+    background-color:  rgb(118, 1, 1);
+    color: white;
+    font-size: 16px;
+  }
+  
+  .closebtn {
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+/* Fonts */
+.road-rage-regular {
+    font-family: "Road Rage", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.nunito-sans {
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 112.5,
+      "YTLC" 500;
+}
+
+
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+/* Centering the Timeline Box */
+.timeline-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin-top: 20px; 
+}
+
+/* Timeline Box */
+.timeline-box {
+    width: 100%;
+    max-width: 900px; 
+    height: 500px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    border: 2px solid rgb(118, 1, 1); 
+    padding: 15px;
+    backdrop-filter: blur(5px);
+    background-color: #8c89893e;
+    border-radius: 10px;
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #f9f9f9; 
+    margin-bottom: 60px;
+}
+
+/* Scrollbar */
+.timeline-box::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.timeline-box::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px; 
+}
+
+.timeline-box::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Body Section 2 */
+.timeline-box h1{
+    font-family: "Nunito Sans", serif;
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-left: 30px;
+    color: white;
+}
+
+.timeline-box h2{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: white;
+    margin-left: 30px;
+}
+
+.timeline-box p {
+    margin: 10px 0;
+    text-align: left;
+    font-family: "Inter", serif;
+    font-size: 20px;
+    margin-left: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: "Inter", serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h6{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+#results{
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+}
+
+.options{
+    font-size: 20px;
+    color: rgb(255, 255, 255)
+}
+
+h5 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: "Road Rage", serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-align: center;
+}
+
+div#poll {
+    background-color: rgba(118, 1, 1, 0.309);
+    border: 5px solid rgb(118, 1, 1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: rgb(118, 1, 1);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: rgb(118, 1, 1);
+}
+
+#results {
+    margin-top: 20px;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h5{
+        font-size: 40px;
+    }
+
+    h6{
+        font-size: 15px;
+    }
+
+    #results{
+        font-size: 10px;
+    }
+
+    .options{
+        font-size: 10px;
+    }
+
+    div#poll {
+        padding: 15px;
+        margin: 10px;
+        max-width: 100%;
+    }
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+.output {
+    text-align: center;
+    overflow: visible;
+    white-space: normal;
+    box-sizing: border-box;
+    background-color: #8c89893e;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(118, 1, 1); 
+    border-radius: 10px;
+    font-family: "Nunito Sans", serif;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px 8vw 15px 8vw; /* Responsive padding */
+    max-width: 90%; /* Prevent it from stretching too much */
+    width: fit-content; /* Only take as much space as needed */
+    margin: 20px auto; /* Center horizontally */
+}
+
+/* Responsive Font Sizing */
+.output h1 {
+    font-size: clamp(10px, 3vw, 30px); /* Adjusts between 20px and 30px */
+}
+
+/* Cursor Styling */
+.cursor::after {
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    background-color: white;
+    animation: blink 0.5s infinite;
+}
+
+h1.cursor::after {
+    height: 1.5em; /* Scales with text */
+    width: 0.5em;
+}
+
+p.cursor::after {
+    height: 1em;
+    width: 0.3em;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .output {
+        padding: 8px 4vw; /* Reduce padding on smaller screens */
+    }
+    .output h1 {
+        font-size: clamp(10px, 3vw, 20px); /* Slightly smaller font */
+    }
+}
+
+/* Further Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+    .output {
+        padding: 8px 3vw; /* Reduce padding further */
+    }
+    .output h1 {
+        font-size: clamp(16px, 4vw, 22px); /* Scale text appropriately */
+    }
+}
+
+
+
+@media (max-width: 1400px) {
+    .hero h1 {
+        font-size: 60px;
+        margin: auto;
+        padding-top: 30px;
+        margin-bottom: -20px;
+        padding: 20px;
+    }
+    
+    .evidence h2{
+        font-size: 20px;
+        margin: auto;
+        padding-bottom: 30px;
+        padding-top: 5px;
+    }
+
+    .discovery h2{
+        font-size: 20px;
+        margin-top: -20px;
+    }
+
+    .evidence p{
+        font-size: 10px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .event h5{
+        font-size: 10px;
+        margin: auto;
+        padding: 5px;
+    }
+
+    .timeline {
+        margin-top: 5px;
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+        height: 100px;
+        overflow: scroll;
+    }
+
+    .interview h2{
+        font-size: 50px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .alert{
+        font-size: 10px;
+    }
+
+    .video-section {
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .video-container {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        width: 100%;
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .timeline-box {
+        width: 100%;
+        margin: 20px;
+        max-width: 700px; 
+        height: 500px; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+        border: 2px solid rgb(118, 1, 1); 
+        padding: 15px;
+        backdrop-filter: blur(5px);
+        background-color: #8c89893e;
+        border-radius: 10px;
+        scrollbar-width: thin; 
+        scrollbar-color: #888 #f9f9f9; 
+        margin-bottom: 100px;
+    }
+
+    .timeline-box h1{
+        font-size: 20px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .timeline-box h2{
+        font-size: 20px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .timeline-box p{
+        font-size: 15px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .timeline-container{
+        margin-bottom: -50px;
+    }
+
+    .video-container{
+        margin-top: -5px;
+    }
+
+}
+
+@media (max-width: 1200px){
+    nav a{
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px){
+
+    .title h4{
+        font-size: 60px;
+        margin: auto;
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .investigator-insights h3{
+        font-size: 20px;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    .insight h3{
+        font-size: 15px;
+    }
+    
+    .insight p{
+        font-size: 10px;
+    }
+
+    .interview h2{
+        font-size: 40px;
+    }
+
+    .timeline-container{
+        margin-bottom: 5px;
+    }
+
+}
+
+
+@media (max-width: 800px){
+
+    .timeline-box {
+        width: 100%;
+        margin: 20px;
+        max-width: 600px; 
+        height: 500px; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+        border: 2px solid rgb(118, 1, 1); 
+        padding: 15px;
+        backdrop-filter: blur(5px);
+        background-color: #8c89893e;
+        border-radius: 10px;
+        scrollbar-width: thin; 
+        scrollbar-color: #888 #f9f9f9; 
+        margin-bottom: 50px;
+    }
+
+    /* Date/Year */
+    .timeline-box h1{
+        font-size: 15px;
+        margin: auto;
+        padding: 6px;
+    }
+
+    /* Explore the Timeline */
+    .timeline-box h2{
+        font-size: 16px;
+        margin: auto;
+        padding: 6px;
+    }
+
+    .timeline-box p{
+        font-size: 13px;
+        margin: auto;
+        padding: 5px;
+    }
+
+    .video-section{
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 500px){
+
+    .investigator-insights {
+        padding: 20px;
+        margin-top: -10px;
+        background: rgba(28, 28, 28, 0.7);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .insight h3{
+        font-size: 12px;
+    }
+
+    .title h4{
+        font-size: 60px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .timeline-box {
+        width: 100%;
+        margin: 20px;
+        max-width: 600px; 
+        height: 500px; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+        border: 2px solid rgb(118, 1, 1); 
+        padding: 15px;
+        backdrop-filter: blur(5px);
+        background-color: #8c89893e;
+        border-radius: 10px;
+        scrollbar-width: thin; 
+        scrollbar-color: #888 #f9f9f9; 
+        margin-bottom: 100px;
+    }
+
+    /* Date/Year */
+    .timeline-box h1{
+        font-size: 13px;
+        margin: auto;
+        padding: 5px;
+    }
+
+    /* Explore the Timeline */
+    .timeline-box h2{
+        font-size: 15px;
+        margin: auto;
+        padding: 5px;
+    }
+
+    .timeline-box p{
+        font-size: 12px;
+        margin: auto;
+        padding: 4px;
+    }
+
+    .timeline-container{
+        margin-bottom: -50px;
+        margin-top: -20px;
+    }
+
+    .video-section{
+        margin-top: -20px;
+    }
+
+    .interview h2{
+        margin-bottom: 12px;
+    }
+}

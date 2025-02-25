@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Disappearance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:opsz,wdth,wght@6..12,112.5,200&family=Road+Rage&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage5/assets/interiorpage5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-links">
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/index.html">Home</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage1/interiorpage1.html">Victims & Family</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage2/interiorpage2.html">The Disappearance</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage4/interiorpage4.html">Tracing the Crime</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage3/interiorpage3.html">Closing Case Files</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/interiorpage5/interiorpage5.html">The Aftermath</a></li>
+              <li><a href="/Users/autumnpitkin/Desktop/P1TextontheWeb/pages/aboutpage/aboutpage.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Warning!</strong> This content may include explicit material. Viewer discretion is advised. The intention is not to offend but to provide information. Proceed only if you are comfortable with potentially sensitive topics.
+      </div>
+    
+    <section class="hero">
+        <h1>After the Tragedy</h1>
+    </section>
+
+    <section class="evidence">
+        <h2>The Impact on Lives Left Behind</h2>
+    </section>
+
+
+    <div class="timeline-container">
+        <div class="timeline-box">
+        <h1>SHANANN & HER DAUGHTERS LAID TO REST</h1>
+        <p>Hundreds of mourners assembled at Sacred Heart Catholic Church in Pinehurst, N.C., to pay their final respects to Shanann, her daughters, and her unborn son, Niko.
+            "I always worried about her and the girls being so far because I couldn't protect them," Shanann's brother, Frankie Rzucek, wrote in her eulogy. Rzucek didn't mention Chris Watts in his eulogy but had previously lashed out at him, calling him a "heartless psychopath" and saying he "stole my whole world."</p>
+            <br>
+        <h1>A SURPRISING PLEA</h1>
+        <p>In a bombshell turn of events, on Nov. 6, 2018, Watts pleaded guilty to the slayings of his pregnant wife and their young children in exchange for being spared a possible death sentence. "The evidence against him was overwhelming," a legal source close to Watts told PEOPLE at the time. "He had no choice, considering the evidence. It took time for him to come around, but he did."
+            But not everyone was happy with the plea agreement; Watts' mother, Cindy, said in several interviews that she thought the confession and the plea were "coerced."</p>
+        <br>
+            <h1>LIFE BEHIND BARS — WITHOUT PAROLE</h1>
+        <p>On Nov. 19, 2018, Watts was sentenced to life in prison without the possibility of parole. "The defendant coldly and deliberately ended four lives," prosecutors said of Shanann, her girls, and her unborn child.
+            During the victim impact statements, Shanann's father, Frank Rzucek, repeatedly referred to Watts as a monster and an evil person. "I have no idea who gave you the right to take their lives," Shanann's mother, Sandra Rzucek (pictured), said, "But I know God and his mighty angels were there in that moment to bring them home to paradise."</p>
+    </div>
+</div>
+
+<section class="interview">
+    <h2>CASE FEATURED IN NETFLIX DOC</h2>
+</section>
+
+<section class="video-section">
+  <div class="video-container">
+    <div style="text-align: center;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ep8iKiQNSrY?si=vuQlI5vEtmu53GDg
+      playlist=tgbNymZ7vqY&loop=1"
+          title="YouTube video" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="interview">
+    <h2>Watts' Life in Prison</h2>
+</section>
+
+<section class="investigator-insights">
+    <div class="insight">
+        <h3>'HE WISHES HE HAD HANDLED THINGS DIFFERENTLY'</h3>
+        <p>According to sources, Watts' life in jail is anything but stimulating. For an hour a day, he gets out of his cell for showers and exercise. He remains in the evaluation unit of the prison.
+            In his cell, he's allowed to have a Bible, but not much more.
+            </p>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="output" id="output">
+      <h1 class="cursor"></h1>
+    </div>
+  </div>
+
+  <h5>Regret and Reflection</h5>
+  <div id="poll">
+      <h6>Do you believe Chris Watts is genuinely remorseful or manipulating the narrative?</h2>
+      <form id="pollForm">
+          <label class="options">
+              <input type="radio" name="response" value="remorseful" required>
+              I believe he is genuinely remorseful.
+          </label><br>
+          <label class="options">
+              <input type="radio" name="response" value="manipulative" required>
+              I believe he is manipulating the narrative.
+          </label><br><br>
+          <button type="submit">Vote</button>
+      </form>
+      <div id="results">
+          <h3>Thank you for voting!</h3>
+          <p id="resultMessage"></p>
+      </div>
+  </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        const pollForm = document.getElementById('pollForm');
+        const resultsDiv = document.getElementById('results');
+        const resultMessage = document.getElementById('resultMessage');
+
+        pollForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+            const response = document.querySelector('input[name="response"]:checked').value;
+
+            // Here, you could send the response to a server or database to store the results.
+            // For now, we will just show a simple message.
+            resultsDiv.style.display = 'block';
+            resultMessage.innerText = `You voted: "${response === 'remorseful' ? 'Genuinely Remorseful' : 'Manipulating the Narrative'}".`;
+        });
+    </script>
+
+
+<script>
+// values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
+var i = 0,
+    a = 0,
+    isBackspacing = false,
+    isParagraph = false;
+
+// Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
+var textArray = [
+  "         With so much free time, Watts has spent a lot of time thinking about his past, says a friend of Watts' who asked PEOPLE only to be identified as Kim.", 
+  "Kim tells PEOPLE 'He's sad that everyone is hurting.'", 
+  "Kim also tells PEOPLE 'He wishes he could go back in time. He wishes he had handled things differently.'",
+];
+
+// Speed (in milliseconds) of typing.
+var speedForward = 100, //Typing Speed
+    speedWait = 1000, // Wait between typing and backspacing
+    speedBetweenLines = 1000, //Wait between first and second lines
+    speedBackspace = 25; //Backspace Speed
+
+//Run the loop
+typeWriter("output", textArray);
+
+function typeWriter(id, ar) {
+  var element = $("#" + id),
+      aString = ar[a],
+      eHeader = element.children("h1"), //Header element
+      eParagraph = element.children("p"); //Subheader element
+  
+  // Determine if animation should be typing or backspacing
+  if (!isBackspacing) {
+    
+    // If full string hasn't yet been typed out, continue typing
+    if (i < aString.length) {
+      
+      // If character about to be typed is a pipe, switch to second line and continue.
+      if (aString.charAt(i) == "|") {
+        isParagraph = true;
+        eHeader.removeClass("cursor");
+        eParagraph.addClass("cursor");
+        i++;
+        setTimeout(function(){ typeWriter(id, ar); }, speedBetweenLines);
+        
+      // If character isn't a pipe, continue typing.
+      } else {
+        // Type header or subheader depending on whether pipe has been detected
+        if (!isParagraph) {
+          eHeader.text(eHeader.text() + aString.charAt(i));
+        } else {
+          eParagraph.text(eParagraph.text() + aString.charAt(i));
+        }
+        i++;
+        setTimeout(function(){ typeWriter(id, ar); }, speedForward);
+      }
+      
+    // If full string has been typed, switch to backspace mode.
+    } else if (i == aString.length) {
+      
+      isBackspacing = true;
+      setTimeout(function(){ typeWriter(id, ar); }, speedWait);
+      
+    }
+    
+  // If backspacing is enabled
+  } else {
+    
+    // If either the header or the paragraph still has text, continue backspacing
+    if (eHeader.text().length > 0 || eParagraph.text().length > 0) {
+      
+      // If paragraph still has text, continue erasing, otherwise switch to the header.
+      if (eParagraph.text().length > 0) {
+        eParagraph.text(eParagraph.text().substring(0, eParagraph.text().length - 1));
+      } else if (eHeader.text().length > 0) {
+        eParagraph.removeClass("cursor");
+        eHeader.addClass("cursor");
+        eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
+      }
+      setTimeout(function(){ typeWriter(id, ar); }, speedBackspace);
+    
+    // If neither head or paragraph still has text, switch to next quote in array and start typing.
+    } else { 
+      
+      isBackspacing = false;
+      i = 0;
+      isParagraph = false;
+      a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
+      setTimeout(function(){ typeWriter(id, ar); }, 50);
+      
+    }
+  }
+}
+
+</script>
+
+
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("nav-links");
+        menu.classList.toggle("active");
+    }
+    </script>
+
+<script>
+
+    var books = document.getElementsByClassName('book');
+    
+    for(var j = 0; j < books.length; j++)
+    {
+      
+      var pages = books[j].getElementsByClassName('page');
+      
+      for(var i = 0; i < pages.length; i++)
+       {
+         var page = pages[i];
+         if (i % 2 === 0)
+           {
+             page.style.zIndex = (pages.length - i);
+           }
+       }
+   
+        for(var i = 0; i < pages.length; i++)
+        {
+           //Or var page = pages[i];
+           pages[i].pageNum = i + 1;
+           pages[i].onclick=function()
+            {
+              if (this.pageNum % 2 === 0)
+                {
+                  this.classList.remove('flipped');
+                  this.previousElementSibling.classList.remove('flipped');
+                }
+              else
+                {
+                  this.classList.add('flipped');
+                  this.nextElementSibling.classList.add('flipped');
+                }
+          }
+        }
+      }
+
+    
+   </script>
+
+</body>
+</html>
