@@ -52,7 +52,10 @@ a:link{
 	text-decoration: none;
 	list-style: none;
 }
-  
+
+li{
+	list-style-type: none;
+}
 
 
 
