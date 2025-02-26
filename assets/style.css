@@ -1,56 +1,58 @@
-html {
-	background: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-	font-family: "Nunito Sans", serif;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 40px;
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
-h1{
-	font-size: 50px;
-	font-weight: 800px;
-}
-
+  
 h2{
-	font-size: 40px;
-	font-weight: 400px;
+	font-family: "elza", sans-serif;
+	font-weight: 200;
+	text-align: left;
+	margin-bottom: -30px;
 }
 
-ul{
-	font-size: 30px;
-	line-height: 60px;
-	list-style: none;
-	color: hotpink;
-	font-weight: lighter;
+#section1 { 
+	background: #D5006D;
+	font-family: "unbounded", sans-serif;
+	text-transform: uppercase; 
+	color: #FE9FAB;
+	text-align: center;
+	font-size: 32px;
 }
-
-a:link{
-	color: hotpink;
+  
+#section2 { 
+	background: #2F6BE5;
+	font-family: "unbounded", sans-serif;
+	text-transform: uppercase; 
+	color: #82CBDA;
+	text-align: center;
+	font-size: 60px;
+}
+  
+#section3 { 
+	background: #3BC09F; 
+	color: #4158D4;
 	text-decoration: none;
 }
-
-a:visited{
-	color: hotpink;
+  
+#section4 { 
+	background: #FF6F61; 
+	color:#FFB300;
 }
 
-a:active{
-	color: hotpink;
-}
+#section5 { background: #FF5733; }
+#section6 { background: #3357FF; }
+#section7 { background: #33FF57; }
+#section8 { background: #FF5733; }
+#section9 { background: #3357FF; }
 
-a:hover{
-	color: hotpink;
+  
+a:link{
+	list-style: none;
+	text-decoration: none;
+	list-style: none;
 }
+  
 
-// <weight>: Use a value from 200 to 1000
-// <uniquifier>: Use a unique and descriptive class name
 
-.nunito-sans {
-  font-family: "Nunito Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 112.5,
-    "YTLC" 500;
-}
+

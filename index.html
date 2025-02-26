@@ -4,32 +4,48 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>My Core 2: Interaction Homepage</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,112.5,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
+<link rel="stylesheet" href="https://use.typekit.net/vjj4qly.css">
+<link rel="stylesheet" href="https://use.typekit.net/vjj4qly.css">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-	<header>
-		<h1>My Core 2: Interaction Homepage</h1>
-	</header>
-	<main>
-		<section>
-			<h2>Studio Projects</h2>
-			<ul>
-				<li><a href="https://www.are.na/autumn-pitkin/the-psychology-behind-society-s-true-crime-obsession">P1.1 Concept</a></li>
-				<li><a href="https://docs.google.com/presentation/d/1N5A_Xu-wgwGx_UqHxEr0ivx_HrAgV6yV_kF01z99964/edit?usp=sharing">P1.2 Design</a></li>
-				<li><a href="studio/projects/1_text-on-the-web/1-4_prototype/P1TextontheWebPrototype/index.html">P1.3 Prototype</a></li>
-				<li><a href="studio/projects/1_text-on-the-web/1-5_final/P1TextontheWeb copy/index.html">P1.4 Final</a></li>
-			</ul>
-		</section>
-		<section>
-			<h2>Studio Workshops</h2>
-			<ul>
-				<li><a href="studio/workshops/story-style/index.html">Story Structure</a></li>
-			</ul>
-		</section>
-	</main>
+
+    <div id="fullpage">
+      
+      <div class="section" id="section1"><header>
+		<h2>My Core 2: 
+      </h2>
+      <h1>Interaction Homepage</h1>
+	</header></div>
+      
+        <div class="section" id="section2">Studio Projects</div>
+       
+    	<div class="section" id="section3"><li><a href="https://www.are.na/autumn-pitkin/the-psychology-behind-society-s-true-crime-obsession"><h2>P1.1</h2><h1>Concept</h1></a></li></div>
+      
+    	<div class="section" id="section4"><li><a href="https://docs.google.com/presentation/d/1N5A_Xu-wgwGx_UqHxEr0ivx_HrAgV6yV_kF01z99964/edit?usp=sharing">P1.2 Design</a></li></div>
+      
+    	<div class="section" id="section5"><li><a href="studio/projects/1_text-on-the-web/1-4_prototype/P1TextontheWebPrototype/index.html">P1.3 Prototype</a></li></div>
+      
+    	<div class="section" id="section6"><li><a href="studio/projects/1_text-on-the-web/1-5_final/P1TextontheWeb copy/index.html">P1.4 Final</a></li></div>
+      
+    	<div class="section" id="section7">Studio Workshops</div>
+
+    	<div class="section" id="section8"><li><a href="studio/workshops/story-style/index.html">Story Structure</a></li></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            navigation: true,
+            scrollHorizontally: true
+        });
+    </script>
 </body>
 </html>
+
+
+
+	
