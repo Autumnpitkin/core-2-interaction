@@ -22,3 +22,12 @@ html, body, main {
 	border-radius: 50%;
 	background-color: darkslategray;
 }
+
+.lightbulb.is-on{
+	background-color: yellow;
+	box-shadow: 0 0 10vmin yellow;
+}
+
+button[name="on"] {
+	color: blue;
+}
