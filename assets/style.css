@@ -11,6 +11,22 @@ h2{
 	margin-bottom: -30px;
 }
 
+h3{
+	font-family: "elza", sans-serif;
+	font-weight: 200;
+	text-align: left;
+	margin-bottom: -70px;
+	font-size: 40px;
+  }
+  
+h4{
+	font-family: "unbounded", sans-serif;
+	text-transform: uppercase; 
+	text-align: center;
+	font-size: 60px;
+}
+
+
 #section1 { 
 	background: #D5006D;
 	font-family: "unbounded", sans-serif;
@@ -34,17 +50,61 @@ h2{
 	color: #4158D4;
 	text-decoration: none;
 }
+
+#section3 h3 h4{
+	color: #4158D4;
+}
+
   
 #section4 { 
 	background: #FF6F61; 
 	color:#FFB300;
+	text-decoration: none;
 }
 
-#section5 { background: #FF5733; }
-#section6 { background: #3357FF; }
-#section7 { background: #33FF57; }
-#section8 { background: #FF5733; }
-#section9 { background: #3357FF; }
+#section4 h3 h4{
+	color:#FFB300;
+}
+
+
+#section5 { 
+	background: #3BC09F; 
+	color: #4158D4;
+	text-decoration: none;
+}
+
+#section5 h3 h4{
+	color: #4158D4;
+}
+
+#section6 { 
+	background: #FF6F61; 
+	color:#FFB300;
+	text-decoration: none;
+}
+
+#section6 h3 h4{
+	color:#FFB300;
+}
+
+#section7 { 
+	background: #2F6BE5;
+	font-family: "unbounded", sans-serif;
+	text-transform: uppercase; 
+	color: #82CBDA;
+	text-align: center;
+	font-size: 60px;
+}
+
+#section8 { 
+	background: #3BC09F; 
+	color: #4158D4;
+	text-decoration: none;; 
+}
+
+#section8 h3 h4{
+	color: #4158D4;
+}
 
   
 a:link{
@@ -56,6 +116,7 @@ a:link{
 li{
 	list-style-type: none;
 }
+
 
 
 
