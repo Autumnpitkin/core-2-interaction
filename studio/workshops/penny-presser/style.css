@@ -1,0 +1,22 @@
+html {
+	background-color: gainsboro;
+}
+
+html, body, main {
+	height: 100%;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+/* PENNY */
+
+.container img {
+	width: 150px;
+	filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.25));
+}
