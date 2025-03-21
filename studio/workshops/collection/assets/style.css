@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: orange;
+	color: yellow;
+	font-family: sans-serif;
+}
+
+.output {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.image {
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+.controls {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+}
+
+.controls-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+button[name="submit"] {
+	grid-column: span 3;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
