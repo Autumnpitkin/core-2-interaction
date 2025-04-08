@@ -26,6 +26,12 @@ h4{
 	font-size: 60px;
 }
 
+h5{
+	font-family: "elza", sans-serif;
+	font-size: 40px;
+	font-weight: 200;
+}
+
 
 #section1 { 
 	background: #D5006D;
@@ -37,40 +43,40 @@ h4{
 }
   
 #section2 { 
-	background: #2F6BE5;
+	background: #FF9C8F;
 	font-family: "unbounded", sans-serif;
 	text-transform: uppercase; 
-	color: #82CBDA;
+	color: #FFDBDB;
 	text-align: center;
 	font-size: 60px;
 }
   
 #section3 { 
-	background: #3BC09F; 
-	color: #4158D4;
+	background: #2F6BE5; 
+	color: #82CBDA;
 	text-decoration: none;
 }
 
 #section3 h3{
-	color: #4158D4;
+	color: #82CBDA;
 }
 
 #section3 h4{
-	color: #4158D4;
+	color: #82CBDA;
 }
 
 #section4 { 
-	background: #FF6F61; 
-	color:#FFB300;
+	background: #3BC09F; 
+	color:#A5F0C5;
 	text-decoration: none;
 }
 
 #section4 h3{
-	color:#FFB300;
+	color:#A5F0C5;
 }
 
 #section4 h4{
-	color:#FFB300;
+	color:#A5F0C5;
 }
 
 
@@ -107,10 +113,10 @@ h4{
 }
 
 #section7 { 
-	background: #2F6BE5;
+	background: #FF9C8F;
 	font-family: "unbounded", sans-serif;
 	text-transform: uppercase; 
-	color: #82CBDA;
+	color: #FFDBDB;
 	text-align: center;
 	font-size: 60px;
 }
@@ -198,6 +204,10 @@ a:link{
 li{
 	list-style-type: none;
 }
+
+  
+
+  
 
 
 
