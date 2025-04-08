@@ -1,0 +1,149 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: rgba(228, 232, 232, 1);
+	color: rgba(82, 89, 115, 1);
+	font-family: "Unbounded", sans-serif;
+
+}
+
+div{
+	margin-top: 20px;
+}
+
+.output {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: center;
+	height: 100vh;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+h1{
+	font-size: 90px;
+	font-family: "microgramma-extended", sans-serif;
+	font-weight: 200;
+	color: rgba(82, 89, 115, 1);
+	margin-top: 20px;
+	/* padding: 20px; */
+}
+
+h2{
+	font-size: 90px;
+	font-family: "microgramma-extended", sans-serif;
+	font-weight: 800;
+	/* padding-left: 10px; */
+	margin-top: -20px;
+}
+
+h1, h2 {
+	display: inline;
+	font-family: "microgramma-extended", sans-serif;
+}
+
+p{
+	font-family: "Unbounded", sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	/* margin-top: -450px; */
+}
+
+h3{
+	font-family: "Unbounded", sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	padding: 170px;
+	/* margin-top: -450px; */
+}
+
+h3 {
+    background: linear-gradient(90deg, rgba(82, 89, 115, 1), rgba(82, 89, 115, 0.4));
+    -webkit-background-clip: text;
+    color: transparent;
+	flex-direction: column;
+}
+
+p {
+    background: linear-gradient(90deg, rgba(82, 89, 115, 1), rgba(82, 89, 115, 0.4));
+    -webkit-background-clip: text;
+    color: transparent;
+	flex-direction: column;
+}
+
+h2 {
+    background: linear-gradient(90deg, rgba(82, 89, 115, 1), rgba(82, 89, 115, 0.4));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.image {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	margin-bottom: 20px;
+	position: fixed;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.controls {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+}
+
+.controls-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+button[name="submit"] {
+	grid-column: span 3;
+	font-family: "Unbounded", sans-serif;
+	background-color: rgba(82, 89, 115, 1);
+	color: rgba(228, 232, 232, 1);
+	padding: 10px;
+	font-size: 30px;
+	border-radius: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+	
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.unbounded {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+

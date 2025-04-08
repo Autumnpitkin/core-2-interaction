@@ -1,0 +1,494 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    background: rgba(228, 232, 232, 1);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 115vh;
+}
+
+.container {
+    position: relative;
+    background: #566789;
+    border-radius: 20px;
+    padding: 5vw;
+    margin: 1vw;
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeBackground {
+    0% { background: #566789; } /* Light */
+    50% { background: #252b39; } /* Dark */
+    100% { background: #566789; } /* Back to Light */
+}
+
+.container {
+    animation: fadeBackground 15s infinite alternate ease-in-out;
+    transition: background 8s ease;
+}
+
+/* Dream Generator*/
+h1 {
+    font-size: 10vw;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: -80px;
+    font-family: "microgramma-extended", sans-serif;
+    text-align: left;
+}
+
+h2 {
+    font-size: 10vw;
+    font-weight: 700;
+    margin: 0;
+    font-family: "microgramma-extended", sans-serif;
+    text-align: left;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, rgba(228, 232, 232, 1), #97b3df);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Create a Dream Before You Fall Asleep*/
+p {
+    font-size: 2vw;
+    color: rgb(76, 91, 120);
+    font-family: "Unbounded", sans-serif;
+    text-align: left;
+    margin-top: -10px;
+
+}
+
+.gradient-text2 {
+    background: linear-gradient(90deg, #e4e8e8, #97b3df);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Floating Cloud Moon Image*/
+.floating-elements img {
+    position: absolute;
+    animation: float 6s infinite ease-in-out alternate;
+     filter: drop-shadow(20px 20px 20px #0e1015);
+}
+
+.mooncloud {
+    position: absolute;
+    width: 1300px;
+    bottom: -500px;
+    right: -150px;
+}
+
+@keyframes float {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-15px);
+    }
+}
+
+/* Floating Clouds Image*/
+.floating-elements2 img {
+    position: absolute;
+    animation: float 6s infinite ease-in-out alternate;
+    filter: drop-shadow(20px 20px 20px #0e1015);
+}
+
+.clouds {
+    position: absolute;
+    width: 1200px;
+    bottom: -200px;
+    left: -200px;
+}
+
+@keyframes float {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-15px);
+    }
+}
+
+
+/* Start Button */
+
+.start {
+    width: 40vw;
+    max-width: 700px;
+    animation: spin 18s infinite linear;
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    bottom: 100px;
+    left: 200px;
+    z-index: 10;
+}
+
+/* Start Button Spinning Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fonts */
+.microgramma1 {
+    font-family: "microgramma-extended", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    
+.microgramma2 {
+    font-family: "microgramma-extended", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    
+.unbounded {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.floating-elements3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5; /* Ensure clouds are above the background */
+}
+
+.cloud {
+    position: absolute;
+    width: 30vw; /* Adjust as needed */
+    opacity: 0.6;
+}
+
+.cloud2{
+    width: 800px;
+    -webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+.cloud1{
+    width: 700px;
+    -webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	transform: scale(0.95);
+}
+
+.cloud3{
+    width: 600px;
+    -webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.cloud4{
+    width: 700px;
+    -webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.cloud5{
+    width: 700px;
+    -webkit-transform: scale(0.85);
+	-moz-transform: scale(0.85);
+	transform: scale(0.85);
+}
+
+.cloud6{
+    width: 700px;
+    -webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	transform: scale(0.95);
+}
+
+.cloud7 {
+    width: 700px;
+    -webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+/* Adjust cloud positions to be visible */
+.cloud1 { top: 40%; left: -300px; }
+.cloud2 { top: 60%; left: -800px; }
+.cloud3 { top: 80%; left: -1200px; }
+.cloud4 { top: 35%; left: -1100px; }
+.cloud5 { top: 70%; left: -2200px; }
+.cloud6 { top: 50%; left: -1700px; }
+.cloud7 { top: 30%; left: -2200px; }
+
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+    z-index: 1; /* Place behind other elements */
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+/* Twinkling effect */
+@keyframes twinkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(82, 89, 115, 1);
+    color: rgba(228, 232, 232, 1);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-family: "Unbounded", sans-serif;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+#music-toggle:hover {
+    background: rgba(66, 73, 95, 1);
+}
+
+@media screen and (max-width: 1170px) {
+    h1 {
+        font-size: 11vw;
+        margin-bottom: -7vw;
+    }
+
+    h2 {
+        font-size: 11vw;
+        margin-bottom: 2vw;
+        text-align: center;
+        display: flex;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    .start {
+        width: 50vw;
+        z-index: 10;
+        bottom: 10vw;
+        left: 10vw;
+    }
+
+    .cloud {
+        width: 40vw;
+        position: absolute;
+    }
+
+    .cloud1 { top: 35%; left: -40vw; }
+    .cloud2 { top: 45%; left: -70vw; }
+    .cloud3 { top: 70%; left: -45vw; }
+    .cloud4 { top: 35%; left: -95vw; }
+    .cloud5 { top: 60%; left: -115vw; }
+    .cloud6 { top: 80%; left: -85vw; }
+    .cloud7 { top: 35%; left: -130vw; }
+
+
+    .start {
+        animation: spin 18s infinite linear;
+        position: relative;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .container {
+        max-height: 100%;
+        width: 100%;
+    }
+
+    .body {
+        height: 20vh;
+    }
+
+    #music-toggle {
+        position: fixed;
+        bottom: 2vw;
+        right: 2vw;
+        padding: 1vw 2vw;
+        font-size: 2vw;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 11vw;
+        margin-bottom: -8vw;
+    }
+
+    h2 {
+        font-size: 11vw;
+        margin-bottom: 2vw;
+        text-align: center;
+        display: flex;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    .start {
+        width: 60vw;
+        z-index: 10;
+        bottom: 10vw;
+        left: 10vw;
+    }
+
+    .cloud {
+        width: 60vw;
+        position: absolute;
+    }
+
+    .cloud1 { top: 20%; left: -40vw; }
+    .cloud2 { top: 40%; left: -60vw; }
+    .cloud3 { top: 60%; left: -45vw; }
+    .cloud4 { top: 30%; left: -95vw; }
+    .cloud5 { top: 72%; left: -120vw; }
+    .cloud6 { top: 55%; left: -100vw; }
+    .cloud7 { top: 40%; left: -135vw; }
+
+
+    .start {
+        animation: spin 18s infinite linear;
+        position: relative;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .container {
+        max-height: 100%;
+        width: 100%;
+    }
+
+    .body {
+        height: 20vh;
+    }
+
+    #music-toggle {
+        position: fixed;
+        bottom: 4vw;
+        right: 4vw;
+        padding: 2vw 4vw;
+        font-size: 3vw;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 11vw;
+        margin-bottom: -8vw;
+    }
+
+    h2 {
+        font-size: 11vw;
+        margin-bottom: 2vw;
+        text-align: center;
+        display: flex;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    .start {
+        width: 60vw;
+        z-index: 10;
+        bottom: 10vw;
+        left: 10vw;
+    }
+
+    .cloud {
+        width: 60vw;
+        position: absolute;
+    }
+
+    .cloud1 { top: 20%; left: -40vw; }
+    .cloud2 { top: 40%; left: -60vw; }
+    .cloud3 { top: 60%; left: -45vw; }
+    .cloud4 { top: 30%; left: -95vw; }
+    .cloud5 { top: 72%; left: -120vw; }
+    .cloud6 { top: 55%; left: -100vw; }
+    .cloud7 { top: 40%; left: -135vw; }
+
+
+    .start {
+        animation: spin 18s infinite linear;
+        position: relative;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .container {
+        max-height: 100%;
+        width: 100%;
+    }
+
+    .body {
+        height: 20vh;
+    }
+
+    #music-toggle {
+        position: fixed;
+        bottom: 4vw;
+        right: 4vw;
+        padding: 2vw 4vw;
+        font-size: 3vw;
+        cursor: pointer;
+        z-index: 10;
+    }
+}

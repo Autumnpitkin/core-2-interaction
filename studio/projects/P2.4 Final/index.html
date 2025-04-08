@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/vjj4qly.css">
+	<link rel="stylesheet" href="assets/index.css">
+</head>
+<body>
+</head>
+<body>
+
+<div class="container">
+    <audio id="bg-music" loop>
+        <source src="assets/ambient-dream-16671.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="music-toggle">Play Dream Soundscape</button>
+    
+        <h1><span class="gradient-text">DREAM</span></h1>
+        <br>
+        <h2><span class="gradient-text">GENERATOR</span></h2>
+        <p><span class="gradient-text2">CREATE A DREAM BEFORE YOU FALL ASLEEP</span></p>
+        <div class="floating-elements">
+           
+    </div>
+    
+    <a href="pages/page1.html">
+        <img src="assets/start.png" alt="Star" class="start">
+    </a>
+
+    <div class="stars"></div>
+
+    <div class="floating-elements3">
+        <img src="assets/cloud1.png" class="cloud cloud1" alt="Cloud">
+        <img src="assets/cloud2.png" class="cloud cloud2" alt="Cloud">
+        <img src="assets/cloud3.png" class="cloud cloud3" alt="Cloud">
+        <img src="assets/cloud4.png" class="cloud cloud4" alt="Cloud">
+        <img src="assets/cloud5.png" class="cloud cloud5" alt="Cloud">
+        <img src="assets/cloud6.png" class="cloud cloud6" alt="Cloud">
+        <img src="assets/cloud7.png" class="cloud cloud7" alt="Cloud">
+    </div>
+</div>
+
+  <!-- Link GSAP Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- JavaScript inside HTML -->
+  <script>
+ document.addEventListener("DOMContentLoaded", function() {
+    function animateCloud(selector, direction, duration, yOffset) {
+        gsap.fromTo(selector, 
+            { x: direction === "right" ? "-100vw" : "100vw" }, // Start position (off-screen)
+            { 
+                x: direction === "right" ? "100vw" : "-100vw", // End position (off-screen)
+                y: yOffset, 
+                duration: duration, 
+                ease: "none",
+                repeat: -1 
+            }
+        );
+    }
+    
+    gsap.to(".cloud1", {
+        x: "120vw", // Moves left to right
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+
+    gsap.to(".cloud2", {
+        x: "120vw", // Moves right to left
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+
+    gsap.to(".cloud3", {
+        x: "120vw", // Moves left to right
+        y: "30px", // Small vertical shift
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+
+    gsap.to(".cloud4", {
+        x: "120vw", // Moves right to left
+        y: "-10px", // Small vertical shift
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+
+    gsap.to(".cloud5", {
+        x: "120vw", // Moves left to right
+        y: "30px", // Small vertical shift
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+
+    gsap.to(".cloud6", {
+        x: "120vw", // Moves right to left
+        y: "-10px", // Small vertical shift
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+
+    gsap.to(".cloud7", {
+        x: "120vw", // Moves right to left
+        y: "-10px", // Small vertical shift
+        duration: 15,
+        repeat: -1,
+        ease: "linear"
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const numStars = 100; // Adjust the number of stars
+    const starsContainer = document.querySelector(".stars");
+
+    for (let i = 0; i < numStars; i++) {
+        let star = document.createElement("div");
+        star.classList.add("star");
+
+        // Random position
+        let x = Math.random() * 100;
+        let y = Math.random() * 100;
+        let delay = Math.random() * 3; // Random delay for twinkling
+
+        star.style.left = `${x}vw`;
+        star.style.top = `${y}vh`;
+        star.style.animationDelay = `${delay}s`;
+
+        starsContainer.appendChild(star);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+        let audio = document.getElementById("bg-music");
+        let button = document.getElementById("music-toggle");
+
+        button.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "Pause Dream Soundscape";
+            } else {
+                audio.pause();
+                button.textContent = "Play Dream Soundscape";
+            }
+        });
+    });
+
+  </script>
+
+</body>
+</html>

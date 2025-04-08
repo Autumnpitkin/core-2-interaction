@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    background: rgba(107, 133, 185, 1);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 115vh;
+}
+
+.container {
+    position: relative;
+    background: rgba(228, 232, 232, 1);
+    border-radius: 20px;
+    padding: 60px;
+    margin: 20px;
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dream Generator*/
+h1 {
+    font-size: 12rem;
+    font-weight: 400;
+    margin: -20px 0;
+    margin-bottom: -80px;
+    font-family: "microgramma-extended", sans-serif;
+    text-align: left;
+}
+
+h2 {
+    font-size: 12rem;
+    font-weight: 700;
+    margin: 5px 0;
+    font-family: "microgramma-extended", sans-serif;
+    text-align: left;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, rgba(82, 89, 115, 1), rgba(82, 89, 115, 0.4));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Create a Dream Before You Fall Asleep*/
+p {
+    font-size: 2rem;
+    color: rgba(82, 89, 115, 1);
+    font-family: "Unbounded", sans-serif;
+    text-align: left;
+    margin-top: -10px;
+
+}
+
+.gradient-text2 {
+    background: linear-gradient(90deg, rgba(82, 89, 115, 1),rgba(82, 89, 115, 0.4));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Floating Cloud Moon Image*/
+.floating-elements img {
+    position: absolute;
+    animation: float 6s infinite ease-in-out alternate;
+    filter: drop-shadow(20px 20px 20px rgb(72, 77, 92));
+}
+
+.mooncloud {
+    position: absolute;
+    width: 1300px;
+    bottom: -500px;
+    right: -150px;
+}
+
+@keyframes float {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-15px);
+    }
+}
+
+/* Floating Clouds Image*/
+.floating-elements2 img {
+    position: absolute;
+    animation: float 6s infinite ease-in-out alternate;
+    filter: drop-shadow(20px 20px 20px rgb(156, 162, 179));
+}
+
+.clouds {
+    position: absolute;
+    width: 1200px;
+    bottom: -200px;
+    left: -200px;
+}
+
+@keyframes float {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-15px);
+    }
+}
+
+/* Start Button */
+
+.start {
+    width: 500px;
+    animation: spin 18s infinite linear;
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    bottom: 50px;
+    left: 300px;
+    z-index: 10;
+}
+
+/* Start Button Spinning Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fonts */
+.microgramma1 {
+    font-family: "microgramma-extended", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    
+.microgramma2 {
+    font-family: "microgramma-extended", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    
+.unbounded {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
