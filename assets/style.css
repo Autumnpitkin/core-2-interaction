@@ -28,9 +28,10 @@ h4{
 
 h5{
 	font-family: "elza", sans-serif;
-	font-size: 40px;
+	font-size: 50px;
 	font-weight: 200;
 }
+  
 
 
 #section1 { 
@@ -204,6 +205,38 @@ a:link{
 li{
 	list-style-type: none;
 }
+
+@keyframes swooshInRight {
+	0% {
+	  opacity: 0;
+	  transform: translateX(100px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+  h5.swoosh-right {
+	opacity: 0;
+	animation: swooshInRight 0.8s ease-out forwards;
+	animation-delay: 3.5s; /* 1 second delay */
+  }
+
+  h2.swoosh-right {
+	opacity: 0;
+	animation: swooshInRight 0.8s ease-out forwards;
+	animation-delay: 1s; /* 1 second delay */
+  }
+
+  h1.swoosh-right {
+	opacity: 0;
+	animation: swooshInRight 0.8s ease-out forwards;
+	animation-delay: 2s; /* 1 second delay */
+  }
+  
+  
+  
 
   
 
