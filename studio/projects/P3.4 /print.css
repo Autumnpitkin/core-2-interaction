@@ -1,0 +1,89 @@
+html {
+    color: rgba(248, 95, 135, 1);;
+}
+
+.navbar, .hero-section, .main, .unsave-btn {
+    display: none;
+}
+
+@media print {
+    /* General print page styles */
+    body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        color: rgba(248, 95, 135, 1);
+    }
+
+    /* Hide navigation, buttons, and unnecessary items */
+    .navbar, 
+    #custom-cursor, 
+    #savedTab, 
+    .button-wrapper, 
+    .print-button {
+        display: none;
+    }
+
+    /* Layout styles for the content */
+    .hero-section {
+        display: none;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Styling entries for printing */
+    .entries {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .entries li {
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(248, 95, 135, 1);
+        padding-bottom: 10px;
+    }
+
+    /* Add space for saved hacks section */
+    #savedSection {
+        margin-top: 40px;
+    }
+
+    #savedEntries {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid rgba(248, 95, 135, 1);
+    }
+
+    /* Adjust text and image sizes for print */
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .side-line {
+        display: none;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+        height: auto;
+        page-break-before: always; /* Ensure that images break pages properly */
+    }
+
+    /* Custom styling for saved hacks section */
+    #savedSection h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+}
